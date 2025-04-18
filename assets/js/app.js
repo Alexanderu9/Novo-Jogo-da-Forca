@@ -20,4 +20,35 @@ const palavras = [
     .split("")
     .map(() => `<div class="letra">_</div>`)
     .join("");
-  
+
+    const letrasDivs = document.querySelectorAll("#palavras > div");
+    const letrasErradasContainer = document.getElementById("insertarLetras");
+    
+    let letrasCertas = [];
+    let letrasErradas = [];
+    
+    letrasDoAlfabeto.forEach(divLetra => {
+      divLetra.addEventListener("click", () => {
+        const letra = divLetra.textContent.toLowerCase();
+    
+     
+        if (letrasCertas.includes(letra) || letrasErradas.includes(letra)) return;
+    
+        if (palavraSecreta.includes(letra)) {
+          letrasCertas.push(letra);
+
+          palavraSecreta.split("").forEach((char, idx) => {
+            if (char === letra) {
+              letrasDivs[idx].textContent = letra;
+            }
+          });
+        } else {
+          letrasErradas.push(letra);
+          letrasErradasContainer.textContent = letrasErradas.join(" ");
+        }
+    
+ 
+        divLetra.style.pointerEvents = "none";
+        divLetra.style.opacity = "0.5";
+      });
+    });
