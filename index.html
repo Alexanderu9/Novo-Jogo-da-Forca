@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   
+    <link rel="stylesheet" href="/assets/css/style.css">
+    <title>Jogo da Forca</title>
+</head>
+<body>
+
+<header>
+    <h1 id="titulo">Jogo da Forca</h1>
+</header>
+
+<!-- Imagem da forca -->
+<main>
+    <section id="imgForca">
+        <img src="assets/img/0.png" alt="Imagem da Forca" width="150px">
+    </section>
+
+    <!-- Área das palavras ocultas -->
+    <section id="palavras">
+        <div id="palavra1">_</div>
+        <div id="palavra2">_</div>
+        <div id="palavra3">_</div>
+        <div id="palavra4">_</div>
+        <div id="palavra5">_</div>
+        <div id="palavra6">_</div>
+        <div id="palavra7">_</div>
+        <div id="palavra8">_</div>
+        <div id="palavra9">_</div>
+        <div id="palavra10">_</div>
+    </section>
+
+    <!-- Mostra o número de tentativas restantes -->
+    <section id="tentativas">
+        <p id="tentativasRestantes">Tentativas: 0</p>
+    </section>
+
+    <!-- Letras disponíveis para tentar -->
+    <section id="letras">
+        <div id="containerLetras">
+            <!-- Letras do alfabeto -->
+            <div id="A" class="letras">A</div>
+            <div id="B" class="letras">B</div>
+            <div id="C" class="letras">C</div>
+            <div id="D" class="letras">D</div>
+            <div id="E" class="letras">E</div>
+            <div id="F" class="letras">F</div>
+            <div id="G" class="letras">G</div>
+            <div id="H" class="letras">H</div>
+            <div id="I" class="letras">I</div>
+            <div id="J" class="letras">J</div>
+            <div id="K" class="letras">K</div>
+            <div id="L" class="letras">L</div>
+            <div id="M" class="letras">M</div>
+            <div id="N" class="letras">N</div>
+            <div id="O" class="letras">O</div>
+            <div id="P" class="letras">P</div>
+            <div id="Q" class="letras">Q</div>
+            <div id="R" class="letras">R</div>
+            <div id="S" class="letras">S</div>
+            <div id="T" class="letras">T</div>
+            <div id="U" class="letras">U</div>
+            <div id="V" class="letras">V</div>
+            <div id="W" class="letras">W</div>
+            <div id="X" class="letras">X</div>
+            <div id="Y" class="letras">Y</div>
+            <div id="Z" class="letras">Z</div>
+        </div>
+    </section>
+</main>
+
+<!-- Controle do jogo -->
+<footer>
+    
+    <!-- Mostra letras que foram erradas -->
+    <div id="letrasErradas">Letras Erradas:</div>
+    <div id="insertarLetras"></div>
+
+    <!-- Botão para reiniciar o jogo -->
+    <div id="reset">Novo jogo?</div>
+
+    <!-- Exibe resultado: ganhou ou perdeu -->
+    <div id="resultado"></div>
+
+</footer>
+
+
+<script src="/assets/js/app.js" type="module"></script>
+
+</body>
+</html>
