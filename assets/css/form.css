@@ -1,13 +1,13 @@
-/* form.css */
 
-/* Reset básico */
+
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
   }
   
-  /* Fundo escuro com toque de neon */
+
   body {
     background-color: #0a0a0a;
     background-image: radial-gradient(circle at top left, rgba(0, 240, 255, 0.1), transparent 70%);

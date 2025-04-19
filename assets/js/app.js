@@ -31,6 +31,10 @@ botaoReset.style.display = "none";
 
 const letrasDivs = document.querySelectorAll("#palavras > div");
 
+const nickname = localStorage.getItem("nickname") || "Jogador";
+const nomeCompleto = localStorage.getItem("nomeCompleto") || "Usuário";
+document.getElementById("boasVindas").textContent = `Bem-vindo, ${nomeCompleto}!`;
+
 letrasDoAlfabeto.forEach(divLetra => {
   divLetra.addEventListener("click", () => {
     const letra = divLetra.textContent.toLowerCase();
@@ -64,12 +68,12 @@ letrasDoAlfabeto.forEach(divLetra => {
       .every(char => letrasCertas.includes(char));
 
     if (venceu) {
-      resultadoJogo.textContent = "Parabéns! Você venceu!";
+      resultadoJogo.textContent = `${nickname} Parabéns! Você venceu!`;
       botaoReset.style.display = "block";
     }
 
     if (tentativasRestantes === 0) {
-      resultadoJogo.textContent = `Você perdeu! A palavra era: ${palavraSecreta}`;
+      resultadoJogo.textContent = `${nickname} Você perdeu! A palavra era: ${palavraSecreta}`;
       botaoReset.style.display = "block";
     }
   });
